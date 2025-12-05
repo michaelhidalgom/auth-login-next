@@ -1,0 +1,23 @@
+.div__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.error {
+  background-color: #e30303;
+}
+
+.warning {
+  background-color: #f7b731;
+}
+
+.success {
+  background-color: #4caf50;
+}
