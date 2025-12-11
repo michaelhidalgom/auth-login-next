@@ -7,13 +7,13 @@ const PageListProduct = () => {
   const { product } = useList();
   return (
     <div>
-      {product?.products.map((item, index) => (
+      {product?.products.map((item) => (
         <DSCard
           title={item.title}
           description={item.description}
           thumbnail={item.thumbnail}
           price={item.price}
-          key={index}
+          key={item.id}
         />
       ))}
     </div>

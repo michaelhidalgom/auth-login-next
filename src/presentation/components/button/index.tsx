@@ -3,7 +3,7 @@ import "./styles.css"; // Importamos el archivo CSS
 
 type ButtonProps = {
   text: string;
-  variant?: "primary" | "secondary" | "danger" | "waring" | "success"; // Tipos de botón
+  variant?: "primary" | "secondary" | "danger" | "warning" | "success"; // Tipos de botón
   size?: "small" | "medium" | "large"; // Tamaños
   onClick?: () => void; // Evento de clic
   disabled?: boolean; // Estado deshabilitado

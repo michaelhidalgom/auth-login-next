@@ -2,7 +2,7 @@ export interface LoginResponse {
   response: {
     accessToken: string;
     refreshToken: string;
-    id: 1;
+    id: number;
     username: string;
     email: string;
     firstName: string;

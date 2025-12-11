@@ -1,3 +1,5 @@
+{}
+
 export interface Products {
   products: Product[];
   total: number;

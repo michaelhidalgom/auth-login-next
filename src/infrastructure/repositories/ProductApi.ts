@@ -2,7 +2,7 @@ import { Products } from "@/domain/models/Product";
 import { api } from "../../application/services/api";
 import { ProductRepository } from "@/domain/repositories/ProductRepository";
 
-export class productApi implements ProductRepository {
+export class ProductApi implements ProductRepository {
   async getAllProducts(): Promise<any> {
     const url = "/products";
     try {

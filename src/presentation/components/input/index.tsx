@@ -9,7 +9,7 @@ type InputProps = {
   disabled?: boolean; // Estado deshabilitado
   error?: boolean; // Indica si hay un error
   className?: string; // Clases adicionales opcionales
-  ref?: React.RefObject<HTMLInputElement>; // Referencia al input
+  ref?: React.RefObject<HTMLInputElement | null>; // Referencia al input
 };
 
 const Input: React.FC<InputProps> = ({

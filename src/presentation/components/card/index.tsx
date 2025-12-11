@@ -1,9 +1,12 @@
-import { Product } from "@/domain/models/Product";
 import Image from "next/image";
 import React from "react";
 
-interface ICardProps extends Product {
-  onClick: () => void;
+interface ICardProps {
+  title: string;
+  description: string;
+  thumbnail: string;
+  price: number;
+  onClick?: () => void;
 }
 
 const Card = ({ title, description, thumbnail, price }: ICardProps) => {

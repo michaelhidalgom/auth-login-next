@@ -1,4 +1,3 @@
-import { Products } from "@/domain/models/Product";
 import { ProductRepository } from "@/domain/repositories/ProductRepository";
 
 export class ProductCases {
