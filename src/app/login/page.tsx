@@ -30,7 +30,7 @@ const LoginPage = () => {
     <div className="div__login">
       {/* Título del formulario */}
       <DSLabel
-        type="large"
+        size="large"
         className="underline"
         text="Ingrese sus credenciales"
       />

@@ -1,8 +1,10 @@
+/* Estilos base para todas las etiquetas */
 .label {
   font-family: Arial, sans-serif;
   margin: 4px 0;
 }
 
+/* Variantes de tamaño */
 .small {
   font-size: 12px;
 }
