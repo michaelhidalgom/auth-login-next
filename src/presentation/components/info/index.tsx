@@ -7,7 +7,7 @@ type InfoProps = {
   type?: "warning" | "error" | "success";
 };
 
-const index: React.FC<InfoProps> = ({ text, type }) => {
+const Info: React.FC<InfoProps> = ({ text, type }) => {
   return (
     <div className={`div__info ${type}`}>
       <DSLabel color="white" text={text} />
@@ -15,4 +15,4 @@ const index: React.FC<InfoProps> = ({ text, type }) => {
   );
 };
 
-export default index;
+export default Info;

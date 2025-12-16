@@ -8,7 +8,7 @@ type LabelProps = {
   className?: string; // Clases adicionales opcionales
 };
 
-const index: React.FC<LabelProps> = ({
+const Label: React.FC<LabelProps> = ({
   text,
   size = "medium",
   color,
@@ -21,4 +21,4 @@ const index: React.FC<LabelProps> = ({
   );
 };
 
-export default index;
+export default Label;

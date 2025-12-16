@@ -1,15 +1,15 @@
 import Image from "next/image";
 import React from "react";
 
-interface ICardProps {
+type CardProps = {
   title: string;
   description: string;
   thumbnail: string;
   price: number;
   onClick?: () => void;
-}
+};
 
-const Card = ({ title, description, thumbnail, price }: ICardProps) => {
+const Card = ({ title, description, thumbnail, price }: CardProps) => {
   return (
     <div>
       <div>

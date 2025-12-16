@@ -14,22 +14,22 @@ interface User {
 }
 
 const useLogin = () => {
-  // --- A. Estado de la Entrada del Usuario ---
+  // --- A. ESTADO DE LA ENTRADA DEL USUARIO ---
   // Almacena las credenciales introducidas en el formulario.
   const [user, setUser] = useState<User>({ username: "", password: "" });
   
-  // --- B. Estado de la Retroalimentación de la UI (Mensajes) ---
+  // --- B. ESTADO DE LA RETROALIMENTACION DE LA UI (MENSAJES) ---
   // Controla la visibilidad y el contenido del mensaje informativo (DSInfo).
   const [error, setError] = useState(false);
   const [textInfo, setTextInfo] = useState("");
   const [colorInfo, setColorInfo] = useState("success");
 
-  // --- C. Estado de Control del Flujo de Ejecución ---
+  // --- C. ESTADO DE CONTROL DEL FLUJO DE EJECUCION ---
   // Controla el estado del botón y la navegación.
   const [buttonDisabled, setButtonDisabled] = useState(false);
   const router = useRouter();
 
-  // --- D. Referencia del DOM ---
+  // --- D. REFERENCIA DEL DOM ---
   // Permite acceder al elemento input del usuario para manipular el foco.
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -125,7 +125,6 @@ const useLogin = () => {
     setUser({ ...user, [field]: e.target.value });
   };
 
-  // RETORNO ORGANIZADO POR FUNCION:
   return {
     // ENTRADA DE FORMULARIO
     user,
