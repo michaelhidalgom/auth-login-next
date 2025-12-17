@@ -1,6 +1,7 @@
 import { ProductRepository } from "@/domain/repositories/ProductRepository";
 
 export class ProductCases {
+  
   constructor(private readonly productRepository: ProductRepository) {}
 
   async getAllProducts(): Promise<any> {

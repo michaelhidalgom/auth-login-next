@@ -50,7 +50,9 @@ const useLogin = () => {
     setTextInfo("");
 
     try {
-      // --- 1. Validaciones básicas de campos vacíos (Lógica de Presentación) ---
+      // --- 1. LOGICA DE PRESENTACION ---
+
+      // Validaciones básicas de campos vacíos
       if (!username && !password) {
         setError(true);
         setTextInfo("Ingrese su usuario y contraseña");
@@ -72,7 +74,9 @@ const useLogin = () => {
         return;
       }
 
-      // --- 2. Ejecución del Caso de Uso (Lógica de Negocio) ---
+      // --- 2. LOGICA DE NEGOCIO ---
+      // Ejecución del Caso de Uso ---
+
       // Instanciamos la clase 'AuthCases' (Capa de Aplicación)
       // Inyectamos 'AuthApi' (Capa de Infraestructura)
       const authCases = new AuthCases(new AuthApi());
@@ -121,7 +125,7 @@ const useLogin = () => {
   };
 
   // Función que se llama cada vez que el usuario teclea en un input
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>, field: string) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>, field: string) => {
     // Actualiza el estado del usuario fusionando el campo modificado
     setUser({ ...user, [field]: e.target.value });
   };
@@ -129,7 +133,7 @@ const useLogin = () => {
   return {
     // ENTRADA DE FORMULARIO
     user,
-    onChange,
+    handleInputChange,
     // ACCIONES DE USUARIO
     handleLogin,
     // MENSAJES DE UI

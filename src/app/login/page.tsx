@@ -13,7 +13,7 @@ const LoginPage = () => {
   const {
     // ENTRADA DE FORMULARIO
     user,           // Estado: Contiene {username, password}
-    onChange,       // Función: Actualiza el estado 'user' al escribir
+    handleInputChange,       // Función: Actualiza el estado 'user' al escribir
     // ACCIONES DE USUARIO
     handleLogin,    // Función: Maneja el intento de inicio de sesión
     // MENSAJES DE UI
@@ -40,14 +40,14 @@ const LoginPage = () => {
         <DSInput
           value={user.username} // Muestra el valor actual del estado 'user'
           ref={inputRef}        // Asigna la referencia para el foco
-          onChange={(e) => onChange(e, "username")} // Llama a la función de actualización de estado
+          onChange={(e) => handleInputChange(e, "username")} // Llama a la función de actualización de estado
           placeholder="Ingrese su usuario"
         />
         {/* Campo de entrada para la contraseña */}
         <DSLabel text="Contraseña" />
         <DSInput
           value={user.password} // Muestra el valor actual del estado 'user'
-          onChange={(e) => onChange(e, "password")} // Llama a la función de actualización de estado
+          onChange={(e) => handleInputChange(e, "password")} // Llama a la función de actualización de estado
           placeholder="Ingrese su contraseña"
           type="password"
         />
