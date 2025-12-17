@@ -73,12 +73,13 @@ const useLogin = () => {
       }
 
       // --- 2. Ejecución del Caso de Uso (Lógica de Negocio) ---
-      // Instancia del caso de uso, inyectando la implementación de la API
-      const loginUseCase = new AuthCases(new AuthApi());
-      const result = await loginUseCase.login(username, password);
+      // Instanciamos la clase 'AuthCases' (Capa de Aplicación)
+      // Inyectamos 'AuthApi' (Capa de Infraestructura)
+      const authCases = new AuthCases(new AuthApi());
+      const isLoginSuccess = await authCases.login(username, password);
 
       // --- 3. Manejo de Respuesta Exitosa (Status 200/204) ---
-      if (result.status === 200 || result.status === 204) {
+      if (isLoginSuccess.status === 200 || isLoginSuccess.status === 204) {
         // Limpia el formulario
         setUser({ username: "", password: "" });
         
@@ -88,12 +89,12 @@ const useLogin = () => {
         setColorInfo("success");
 
         // Almacena la información de sesión en LocalStorage
-        if ("response" in result) {
-          localStorage.setItem("token", result.response.accessToken);
-          localStorage.setItem("username", result.response.username);
-          localStorage.setItem("email", result.response.email);
-          localStorage.setItem("firstName", result.response.firstName);
-          localStorage.setItem("lastName", result.response.lastName);
+        if ("response" in isLoginSuccess) {
+          localStorage.setItem("token", isLoginSuccess.response.accessToken);
+          localStorage.setItem("username", isLoginSuccess.response.username);
+          localStorage.setItem("email", isLoginSuccess.response.email);
+          localStorage.setItem("firstName", isLoginSuccess.response.firstName);
+          localStorage.setItem("lastName", isLoginSuccess.response.lastName);
           
           // Redirige al usuario al listado de productos
           router.push("/listado");

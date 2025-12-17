@@ -1,6 +1,7 @@
 import { Products } from "@/domain/models/Product";
-import { api } from "../../application/services/api";
+//import { api } from "../../application/services/api";
 import { ProductRepository } from "@/domain/repositories/ProductRepository";
+import api from "../networking/api";
 
 export class ProductApi implements ProductRepository {
   async getAllProducts(): Promise<any> {
